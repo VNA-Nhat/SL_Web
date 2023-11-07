@@ -1,0 +1,146 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap to the next row on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: black;
+  color: #fff;
+  width: 100%;
+}
+
+.header .logo img {
+  max-width: 100px;
+  margin-right: 10px; /* Add some spacing between the logo and other elements */
+}
+
+.header .search-bar {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.header .search-bar input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex-grow: 1;
+}
+
+.header .search-bar button,
+.header .shop button,
+.header .login button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+/* Media Queries for Improved Header Responsiveness */
+@media (max-width: 768px) {
+  .header .logo img {
+    max-width: 80px;
+    margin-right: 0; /* Remove margin between the logo and buttons on smaller screens */
+  }
+
+  .header .search-bar {
+    flex-direction: column;
+    align-items: center; /* Center-align items in the search bar on smaller screens */
+  }
+
+  .header .search-bar input {
+    width: 100%;
+  }
+
+  .header .search-bar button,
+  .shop button,
+  .header .login button {
+    width: 100%;
+    margin-left: 10px; /* Add spacing between the buttons and center-align them */
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  background-color: #333;
+  color: #fff;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Content Styles */
+.content {
+  max-width: 100%; /* Make content width responsive */
+  margin: 0 auto;
+  background-color: #333;
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10px; /* Add padding for better spacing on smaller screens */
+}
+
+.product {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-right: 20px; /* Reduce margin for smaller screens */
+  margin-left: 20px; /* Reduce margin for smaller screens */
+  margin-bottom: 20px; /* Increase margin for better spacing on smaller screens */
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.footer a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column; /* Stack products in a column on smaller screens */
+    align-items: center;
+  }
+
+  .product {
+    flex: 0 0 100%; /* Make products full-width on smaller screens */
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
